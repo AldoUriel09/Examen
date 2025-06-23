@@ -103,4 +103,19 @@ img:hover {
     }
   }
 
+  .filtro-categorias {
+  max-width: 300px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.filtro-categorias select {
+  padding: 8px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+
 

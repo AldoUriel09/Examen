@@ -8,6 +8,7 @@ export interface Product{
   imagen: string;
   detalles: string;
   mostrarDetalles:boolean;
+  categoria: string; // nuevo campo
 }
 
 @Injectable({
@@ -24,7 +25,8 @@ export class Products {
       precio: '$22,199',
       imagen: '/img/gabinete1.jpg',
       detalles: 'Marca: 	PSA COMPUTO Y PAPELERIA, Sistema operativo	Chrome OS, Modelo de CPU	1.2GHz Cortex A9 Processor',
-      mostrarDetalles: false // <- esta propiedad es clave
+      mostrarDetalles: false, // <- esta propiedad es clave
+      categoria: 'PC'
     },
     {
       id: 2,
@@ -33,7 +35,8 @@ export class Products {
       precio: '$30,491',
       imagen: '/img/rtx5090.jpg',
       detalles: 'Coprocesador de gráficos	GeForce RTX 5080 Marca	GIGABYTE, Tamaño de RAM para gráficos	16 GB, Velocidad del reloj GPU	2670 MHz, Interfaz de salida de video	DisplayPort',
-      mostrarDetalles: false // <- esta propiedad es clave
+      mostrarDetalles: false, // <- esta propiedad es clave
+      categoria: 'Tarjeta gráfica'
     },
     {
       id: 3,
@@ -42,7 +45,8 @@ export class Products {
       precio: '$18,935',
       imagen: '/img/inteli9.jpg',
       detalles: 'Marca	Intel, Fabricante del CPU	Intel, Modelo de CPU	Core i9, Velocidad de CPU	6,2 GHz, Enchufe de CPU	LGA 1700',
-      mostrarDetalles: false // <- esta propiedad es clave
+      mostrarDetalles: false, // <- esta propiedad es clave
+      categoria: 'Procesador'
     },
    {
       id: 4,
@@ -51,7 +55,8 @@ export class Products {
       precio: '$15,189',
       imagen: '/img/amd9.jpg',
       detalles: 'Marca	AMD, Fabricante de CPU	AMD, Modelo de CPU	Desconocido, Velocidad de la CPU	4,3 GHz, Zócalo de CPU	Socket AM5',
-      mostrarDetalles: false // <- esta propiedad es clave
+      mostrarDetalles: false, // <- esta propiedad es clave
+      categoria: 'Procesador'
    }
   ]
   constructor(){}
