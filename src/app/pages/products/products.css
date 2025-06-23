@@ -1,10 +1,106 @@
-.productos{
+
+  /* Estilo general de la sección */
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: #2c3e50;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+
+ img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 3rem auto;
+    filter: grayscale(15%);
+    transition: filter 0.4s ease;
+}
+
+img:hover {
+    filter: grayscale(0%) contrast(105%);
+}
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .producto {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eaeaea;
     display: flex;
-    flex-wrap: wrap;
-    /* gap: 10px; */
-}
-.producto{
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 25%;
-}
+    flex-direction: column;
+  }
+
+  .producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .producto h3 {
+    font-size: 1.2rem;
+    margin: 1rem 1.5rem 0.5rem;
+    color: #333;
+  }
+
+  .producto p {
+    margin: 0 1.5rem 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex-grow: 1;
+  }
+
+  .producto strong {
+    display: block;
+    margin: 0 1.5rem 1.5rem;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+
+  .producto button {
+    margin: 0 1.5rem 1.5rem;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+  }
+
+  .producto button:hover {
+    background: linear-gradient(135deg, #5a7bf9, #9a68e0);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(106, 118, 251, 0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .productos {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+
+

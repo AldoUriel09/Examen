@@ -1,14 +1,21 @@
 <h1>Nuestros productos</h1>
-<img src="/img/pc_1.webp" alt="Moto">
 <section class="productos">
-    @for(producto of productos; track producto.id){
-        <article class="producto">
-            <img [src]="producto.imagen" [alt]="producto.nombre">
-            <h3>{{producto.nombre}}</h3>
-            <p>{{producto.descripcion}}</p>
-            <strong>{{producto.precio}}</strong>
-            <br>
-            <button>Ver más</button>
-        </article>
-    }
+  @for (producto of productos; track producto.id) {
+    <article class="producto">
+      <img [src]="producto.imagen" [alt]="producto.nombre">
+      <h3>{{ producto.nombre }}</h3>
+      <p>{{ producto.descripcion }}</p>
+      <strong>{{ producto.precio }}</strong>
+      <br>
+      <button (click)="toggleDetalles(producto)">
+        {{ producto.mostrarDetalles ? 'Ocultar' : 'Ver más' }}
+      </button>
+
+      @if (producto.mostrarDetalles) {
+        <div class="detalles">
+          <p><strong>Detalles:</strong> {{ producto.detalles }}</p>
+        </div>
+      }
+    </article>
+  }
 </section>

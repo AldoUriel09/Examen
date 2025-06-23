@@ -12,4 +12,7 @@ export class Productos {
   constructor(private product:Products){
     this.productos = this.product.getProducts();
   }
+  toggleDetalles(producto: any) {
+    producto.mostrarDetalles = !producto.mostrarDetalles;
+  }
 }
